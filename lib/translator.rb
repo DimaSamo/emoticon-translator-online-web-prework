@@ -2,9 +2,8 @@
 require 'yaml'
 require 'pry'
 def load_library(path)
-  hash = YAML.load_file(path)
-  hash["get_meaning"] = ""
-  hash["get_emoticon"] = ""
+  YAML.load_file(path)
+  hash = {"get_meaning" => "", "get_emoticon" => ""}
   hash
 #  binding.pry
 end
