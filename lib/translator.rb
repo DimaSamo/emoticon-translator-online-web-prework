@@ -3,6 +3,7 @@ require 'yaml'
 require 'pry'
 def load_library(path)
   hash = YAML.load_file(path)
+  binding.pry
 end
 
 def get_japanese_emoticon
@@ -14,3 +15,4 @@ def get_english_meaning
 end
 
 path = "./lib/emoticons.yml"
+load_library(path)
