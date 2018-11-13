@@ -6,6 +6,7 @@ def load_library(path)
   hash = {"get_meaning" => {}, "get_emoticon" => {}}
   library.each do |meaning, emote_array|
     hash["get_meaning"][emote_array[1]] = meaning
+    hash["get_emoticon"][emote_array[0]] = emote_array[1]
   end
   hash
   #binding.pry
